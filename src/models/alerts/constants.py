@@ -1,6 +1,7 @@
+import os
 
 COLLECTION = "alerts"
-URL = "https://api.mailgun.net/v3/grancomunicaciones.com/messages"
-API_KEY = "key-56034861e8e99009e415de08b37e2fc4"
-FROM = "Postmaster <postmaster@grancomunicaciones.com>"
+URL = os.environ.get("MAILGUN_URL")
+API_KEY = os.environ.get("MAILGUN_API_KEY")
+FROM = os.environ.get("MAILGUN_FROM")
 ALERT_TIMEOUT = 10
